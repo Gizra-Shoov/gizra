@@ -61,7 +61,7 @@ describe('Visual monitor testing', function() {
   it('should show the home page',function(done) {
     client
       .url(baseUrl)
-      .pause(5000)
+      .pause(15000)
       .webdrivercss(testName + '.homepage', {
         name: '1',
         exclude: [],
@@ -81,7 +81,9 @@ describe('Visual monitor testing', function() {
             '.blog .author-details',
             '.blog .title',
             // Info.
-            '.element p'
+            '.element p',
+            // About.
+            '#about p'
           ],
         screenWidth: selectedCaps == 'chrome' ? [320, 1200] : undefined,
       }, resultsCallback)
